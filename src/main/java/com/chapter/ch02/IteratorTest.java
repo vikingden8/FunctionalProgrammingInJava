@@ -31,7 +31,7 @@ public class IteratorTest {
         });
         System.out.println("//" + "END:INTERNAL_FOR_EACH_OUTPUT");
 
-/*        System.out.println("//" + "START:INTERNAL_OUTPUT");
+        System.out.println("//" + "START:INTERNAL_OUTPUT");
         Folks.friends.forEach((final String name) -> System.out.println(name));
         System.out.println("//" + "END:INTERNAL_OUTPUT");
 
@@ -39,6 +39,6 @@ public class IteratorTest {
 
         Folks.friends.forEach(name -> System.out.println(name));
 
-        Folks.friends.forEach(System.out::println);*/
+        Folks.friends.forEach(System.out::println);
     }
 }
