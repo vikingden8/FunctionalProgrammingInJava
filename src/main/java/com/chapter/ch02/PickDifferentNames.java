@@ -2,6 +2,7 @@ package com.chapter.ch02;
 
 import com.chapter.util.Folks;
 
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**
@@ -27,6 +28,15 @@ public class PickDifferentNames {
                 .filter(checkIfStartWith("N")).count() ;
         System.out.println(countStartWithB_);
         System.out.println(countStartWithN_);
+
+        final Function<String, Predicate<String>> startsWithLetter =
+                letter -> name -> name.startsWith(letter);
+        final long countStartWithB__ = Folks.friends.stream()
+                .filter(startsWithLetter.apply("B")).count() ;
+        final long countStartWithN__ = Folks.friends.stream()
+                .filter(startsWithLetter.apply("N")).count() ;
+        System.out.println(countStartWithB__);
+        System.out.println(countStartWithN__);
     }
 
     public static Predicate<String> checkIfStartWith(final String letter){
