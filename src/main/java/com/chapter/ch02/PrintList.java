@@ -2,6 +2,7 @@ package com.chapter.ch02;
 
 import com.chapter.util.Folks;
 
+
 import static java.util.stream.Collectors.joining;
 
 /**
@@ -9,6 +10,9 @@ import static java.util.stream.Collectors.joining;
  * Date : 2017/6/22
  */
 public class PrintList {
+
+
+
     public static void main(String[] args) {
         System.out.println("//" + "START:FOREACH_OUTPUT");
         for(String name : Folks.friends) {
